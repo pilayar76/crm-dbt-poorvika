@@ -1,0 +1,572 @@
+
+
+============================== 2023-01-22 16:38:27.434235 | e4b37c9e-c5c0-465a-8738-5828f085e59b ==============================
+[0m16:38:27.434246 [info ] [MainThread]: Running with dbt=1.3.2
+[0m16:38:27.434530 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/root/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'config_dir': False, 'which': 'debug', 'indirect_selection': 'eager'}
+[0m16:38:27.434633 [debug] [MainThread]: Tracking: tracking
+[0m16:38:27.435580 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f95944d6980>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f95944d6e90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f95944d6dd0>]}
+[0m16:38:27.488529 [debug] [MainThread]: Executing "git --help"
+[0m16:38:27.489873 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m16:38:27.490001 [debug] [MainThread]: STDERR: "b''"
+[0m16:38:27.491047 [debug] [MainThread]: Acquiring new postgres connection "debug"
+[0m16:38:27.491174 [debug] [MainThread]: Using postgres connection "debug"
+[0m16:38:27.491270 [debug] [MainThread]: On debug: select 1 as id
+[0m16:38:27.491361 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:38:27.507688 [debug] [MainThread]: SQL status: SELECT 1 in 0.02 seconds
+[0m16:38:27.508462 [debug] [MainThread]: On debug: Close
+[0m16:38:27.508729 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f95944d7f10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f95944d44f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f95944d41c0>]}
+[0m16:38:27.508973 [debug] [MainThread]: Flushing usage events
+[0m16:38:28.312202 [debug] [MainThread]: Connection 'debug' was properly closed.
+
+
+============================== 2023-01-22 16:38:44.356902 | 53be3d5e-1a72-4271-9291-da037de72592 ==============================
+[0m16:38:44.356916 [info ] [MainThread]: Running with dbt=1.3.2
+[0m16:38:44.357284 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/root/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m16:38:44.357511 [debug] [MainThread]: Tracking: tracking
+[0m16:38:44.358530 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb3ecdc4eb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb3ecdc4910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb3ecdc4940>]}
+[0m16:38:44.367606 [info ] [MainThread]: Partial parse save file not found. Starting full parse.
+[0m16:38:44.367821 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '53be3d5e-1a72-4271-9291-da037de72592', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb3ecef0520>]}
+[0m16:38:44.379419 [debug] [MainThread]: Parsing macros/timestamps.sql
+[0m16:38:44.381816 [debug] [MainThread]: Parsing macros/adapters.sql
+[0m16:38:44.406130 [debug] [MainThread]: Parsing macros/relations.sql
+[0m16:38:44.407441 [debug] [MainThread]: Parsing macros/catalog.sql
+[0m16:38:44.409569 [debug] [MainThread]: Parsing macros/utils/last_day.sql
+[0m16:38:44.410881 [debug] [MainThread]: Parsing macros/utils/datediff.sql
+[0m16:38:44.417299 [debug] [MainThread]: Parsing macros/utils/any_value.sql
+[0m16:38:44.417717 [debug] [MainThread]: Parsing macros/utils/split_part.sql
+[0m16:38:44.418711 [debug] [MainThread]: Parsing macros/utils/listagg.sql
+[0m16:38:44.420076 [debug] [MainThread]: Parsing macros/utils/dateadd.sql
+[0m16:38:44.420630 [debug] [MainThread]: Parsing macros/materializations/incremental_strategies.sql
+[0m16:38:44.421547 [debug] [MainThread]: Parsing macros/materializations/snapshot_merge.sql
+[0m16:38:44.423120 [debug] [MainThread]: Parsing macros/utils/data_types.sql
+[0m16:38:44.430709 [debug] [MainThread]: Parsing macros/utils/hash.sql
+[0m16:38:44.431776 [debug] [MainThread]: Parsing macros/utils/last_day.sql
+[0m16:38:44.433558 [debug] [MainThread]: Parsing macros/utils/datediff.sql
+[0m16:38:44.434780 [debug] [MainThread]: Parsing macros/utils/intersect.sql
+[0m16:38:44.435550 [debug] [MainThread]: Parsing macros/utils/replace.sql
+[0m16:38:44.436722 [debug] [MainThread]: Parsing macros/utils/any_value.sql
+[0m16:38:44.437602 [debug] [MainThread]: Parsing macros/utils/array_concat.sql
+[0m16:38:44.438673 [debug] [MainThread]: Parsing macros/utils/split_part.sql
+[0m16:38:44.440746 [debug] [MainThread]: Parsing macros/utils/array_append.sql
+[0m16:38:44.441754 [debug] [MainThread]: Parsing macros/utils/length.sql
+[0m16:38:44.442650 [debug] [MainThread]: Parsing macros/utils/literal.sql
+[0m16:38:44.443520 [debug] [MainThread]: Parsing macros/utils/right.sql
+[0m16:38:44.444549 [debug] [MainThread]: Parsing macros/utils/concat.sql
+[0m16:38:44.445455 [debug] [MainThread]: Parsing macros/utils/listagg.sql
+[0m16:38:44.447670 [debug] [MainThread]: Parsing macros/utils/bool_or.sql
+[0m16:38:44.448539 [debug] [MainThread]: Parsing macros/utils/cast_bool_to_text.sql
+[0m16:38:44.449517 [debug] [MainThread]: Parsing macros/utils/except.sql
+[0m16:38:44.450281 [debug] [MainThread]: Parsing macros/utils/array_construct.sql
+[0m16:38:44.451844 [debug] [MainThread]: Parsing macros/utils/date_trunc.sql
+[0m16:38:44.452834 [debug] [MainThread]: Parsing macros/utils/position.sql
+[0m16:38:44.453881 [debug] [MainThread]: Parsing macros/utils/escape_single_quotes.sql
+[0m16:38:44.454850 [debug] [MainThread]: Parsing macros/utils/safe_cast.sql
+[0m16:38:44.455865 [debug] [MainThread]: Parsing macros/utils/dateadd.sql
+[0m16:38:44.457028 [debug] [MainThread]: Parsing macros/etc/datetime.sql
+[0m16:38:44.465654 [debug] [MainThread]: Parsing macros/etc/statement.sql
+[0m16:38:44.470900 [debug] [MainThread]: Parsing macros/generic_test_sql/relationships.sql
+[0m16:38:44.471723 [debug] [MainThread]: Parsing macros/generic_test_sql/unique.sql
+[0m16:38:44.472349 [debug] [MainThread]: Parsing macros/generic_test_sql/not_null.sql
+[0m16:38:44.473102 [debug] [MainThread]: Parsing macros/generic_test_sql/accepted_values.sql
+[0m16:38:44.474443 [debug] [MainThread]: Parsing macros/materializations/configs.sql
+[0m16:38:44.476701 [debug] [MainThread]: Parsing macros/materializations/hooks.sql
+[0m16:38:44.480566 [debug] [MainThread]: Parsing macros/materializations/seeds/helpers.sql
+[0m16:38:44.498992 [debug] [MainThread]: Parsing macros/materializations/seeds/seed.sql
+[0m16:38:44.506080 [debug] [MainThread]: Parsing macros/materializations/snapshots/helpers.sql
+[0m16:38:44.518431 [debug] [MainThread]: Parsing macros/materializations/snapshots/strategies.sql
+[0m16:38:44.534387 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot.sql
+[0m16:38:44.545973 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot_merge.sql
+[0m16:38:44.547529 [debug] [MainThread]: Parsing macros/materializations/models/table/table.sql
+[0m16:38:44.552902 [debug] [MainThread]: Parsing macros/materializations/models/table/create_table_as.sql
+[0m16:38:44.556378 [debug] [MainThread]: Parsing macros/materializations/models/incremental/is_incremental.sql
+[0m16:38:44.557806 [debug] [MainThread]: Parsing macros/materializations/models/incremental/merge.sql
+[0m16:38:44.572576 [debug] [MainThread]: Parsing macros/materializations/models/incremental/column_helpers.sql
+[0m16:38:44.580619 [debug] [MainThread]: Parsing macros/materializations/models/incremental/incremental.sql
+[0m16:38:44.591108 [debug] [MainThread]: Parsing macros/materializations/models/incremental/strategies.sql
+[0m16:38:44.597728 [debug] [MainThread]: Parsing macros/materializations/models/incremental/on_schema_change.sql
+[0m16:38:44.614095 [debug] [MainThread]: Parsing macros/materializations/models/view/create_or_replace_view.sql
+[0m16:38:44.617396 [debug] [MainThread]: Parsing macros/materializations/models/view/helpers.sql
+[0m16:38:44.618623 [debug] [MainThread]: Parsing macros/materializations/models/view/create_view_as.sql
+[0m16:38:44.620801 [debug] [MainThread]: Parsing macros/materializations/models/view/view.sql
+[0m16:38:44.626169 [debug] [MainThread]: Parsing macros/materializations/tests/helpers.sql
+[0m16:38:44.627825 [debug] [MainThread]: Parsing macros/materializations/tests/test.sql
+[0m16:38:44.632397 [debug] [MainThread]: Parsing macros/materializations/tests/where_subquery.sql
+[0m16:38:44.634184 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_alias.sql
+[0m16:38:44.635575 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_schema.sql
+[0m16:38:44.638072 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_database.sql
+[0m16:38:44.639685 [debug] [MainThread]: Parsing macros/python_model/python.sql
+[0m16:38:44.645662 [debug] [MainThread]: Parsing macros/adapters/timestamps.sql
+[0m16:38:44.648913 [debug] [MainThread]: Parsing macros/adapters/schema.sql
+[0m16:38:44.651112 [debug] [MainThread]: Parsing macros/adapters/metadata.sql
+[0m16:38:44.658125 [debug] [MainThread]: Parsing macros/adapters/relation.sql
+[0m16:38:44.672569 [debug] [MainThread]: Parsing macros/adapters/apply_grants.sql
+[0m16:38:44.686412 [debug] [MainThread]: Parsing macros/adapters/columns.sql
+[0m16:38:44.695981 [debug] [MainThread]: Parsing macros/adapters/indexes.sql
+[0m16:38:44.698624 [debug] [MainThread]: Parsing macros/adapters/persist_docs.sql
+[0m16:38:44.703072 [debug] [MainThread]: Parsing macros/adapters/freshness.sql
+[0m16:38:44.705098 [debug] [MainThread]: Parsing tests/generic/builtin.sql
+[0m16:38:44.991186 [debug] [MainThread]: 1699: static parser successfully parsed example/my_first_dbt_model.sql
+[0m16:38:45.003001 [debug] [MainThread]: 1699: static parser successfully parsed example/my_second_dbt_model.sql
+[0m16:38:45.071256 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '53be3d5e-1a72-4271-9291-da037de72592', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb3ec142020>]}
+[0m16:38:45.076944 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '53be3d5e-1a72-4271-9291-da037de72592', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb3ecef02e0>]}
+[0m16:38:45.077154 [info ] [MainThread]: Found 2 models, 4 tests, 0 snapshots, 0 analyses, 289 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+[0m16:38:45.077344 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '53be3d5e-1a72-4271-9291-da037de72592', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb3ec572b90>]}
+[0m16:38:45.078340 [info ] [MainThread]: 
+[0m16:38:45.078825 [debug] [MainThread]: Acquiring new postgres connection "master"
+[0m16:38:45.079662 [debug] [ThreadPool]: Acquiring new postgres connection "list_airbyte"
+[0m16:38:45.090636 [debug] [ThreadPool]: Using postgres connection "list_airbyte"
+[0m16:38:45.090759 [debug] [ThreadPool]: On list_airbyte: /* {"app": "dbt", "dbt_version": "1.3.2", "profile_name": "crm_mongodb", "target_name": "prod", "connection_name": "list_airbyte"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m16:38:45.090851 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:38:45.107656 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.02 seconds
+[0m16:38:45.108826 [debug] [ThreadPool]: On list_airbyte: Close
+[0m16:38:45.110092 [debug] [ThreadPool]: Acquiring new postgres connection "list_airbyte_public"
+[0m16:38:45.115743 [debug] [ThreadPool]: Using postgres connection "list_airbyte_public"
+[0m16:38:45.115859 [debug] [ThreadPool]: On list_airbyte_public: BEGIN
+[0m16:38:45.115947 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:38:45.130360 [debug] [ThreadPool]: SQL status: BEGIN in 0.01 seconds
+[0m16:38:45.130473 [debug] [ThreadPool]: Using postgres connection "list_airbyte_public"
+[0m16:38:45.130560 [debug] [ThreadPool]: On list_airbyte_public: /* {"app": "dbt", "dbt_version": "1.3.2", "profile_name": "crm_mongodb", "target_name": "prod", "connection_name": "list_airbyte_public"} */
+select
+      'airbyte' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'airbyte' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+  
+[0m16:38:45.133444 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.0 seconds
+[0m16:38:45.134298 [debug] [ThreadPool]: On list_airbyte_public: ROLLBACK
+[0m16:38:45.135684 [debug] [ThreadPool]: On list_airbyte_public: Close
+[0m16:38:45.139620 [debug] [MainThread]: Using postgres connection "master"
+[0m16:38:45.139738 [debug] [MainThread]: On master: BEGIN
+[0m16:38:45.139825 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:38:45.155450 [debug] [MainThread]: SQL status: BEGIN in 0.02 seconds
+[0m16:38:45.155560 [debug] [MainThread]: Using postgres connection "master"
+[0m16:38:45.155645 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.3.2", "profile_name": "crm_mongodb", "target_name": "prod", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m16:38:45.159356 [debug] [MainThread]: SQL status: SELECT 0 in 0.0 seconds
+[0m16:38:45.160185 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '53be3d5e-1a72-4271-9291-da037de72592', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb3ec142dd0>]}
+[0m16:38:45.160392 [debug] [MainThread]: On master: ROLLBACK
+[0m16:38:45.160813 [debug] [MainThread]: Using postgres connection "master"
+[0m16:38:45.160911 [debug] [MainThread]: On master: BEGIN
+[0m16:38:45.161452 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m16:38:45.161557 [debug] [MainThread]: On master: COMMIT
+[0m16:38:45.161645 [debug] [MainThread]: Using postgres connection "master"
+[0m16:38:45.161727 [debug] [MainThread]: On master: COMMIT
+[0m16:38:45.162016 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m16:38:45.162121 [debug] [MainThread]: On master: Close
+[0m16:38:45.162519 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
+[0m16:38:45.162723 [info ] [MainThread]: 
+[0m16:38:45.165226 [debug] [Thread-1 (]: Began running node model.crm_mongodb.my_first_dbt_model
+[0m16:38:45.165433 [info ] [Thread-1 (]: 1 of 2 START sql table model public.my_first_dbt_model ......................... [RUN]
+[0m16:38:45.166104 [debug] [Thread-1 (]: Acquiring new postgres connection "model.crm_mongodb.my_first_dbt_model"
+[0m16:38:45.166227 [debug] [Thread-1 (]: Began compiling node model.crm_mongodb.my_first_dbt_model
+[0m16:38:45.166334 [debug] [Thread-1 (]: Compiling model.crm_mongodb.my_first_dbt_model
+[0m16:38:45.168701 [debug] [Thread-1 (]: Writing injected SQL for node "model.crm_mongodb.my_first_dbt_model"
+[0m16:38:45.169011 [debug] [Thread-1 (]: finished collecting timing info
+[0m16:38:45.169127 [debug] [Thread-1 (]: Began executing node model.crm_mongodb.my_first_dbt_model
+[0m16:38:45.208424 [debug] [Thread-1 (]: Writing runtime sql for node "model.crm_mongodb.my_first_dbt_model"
+[0m16:38:45.208762 [debug] [Thread-1 (]: Using postgres connection "model.crm_mongodb.my_first_dbt_model"
+[0m16:38:45.208867 [debug] [Thread-1 (]: On model.crm_mongodb.my_first_dbt_model: BEGIN
+[0m16:38:45.208954 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:38:45.223660 [debug] [Thread-1 (]: SQL status: BEGIN in 0.01 seconds
+[0m16:38:45.223779 [debug] [Thread-1 (]: Using postgres connection "model.crm_mongodb.my_first_dbt_model"
+[0m16:38:45.223864 [debug] [Thread-1 (]: On model.crm_mongodb.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.3.2", "profile_name": "crm_mongodb", "target_name": "prod", "node_id": "model.crm_mongodb.my_first_dbt_model"} */
+
+  
+    
+
+  create  table "airbyte"."public"."my_first_dbt_model__dbt_tmp"
+  as (
+    /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+  );
+  
+[0m16:38:45.225384 [debug] [Thread-1 (]: SQL status: SELECT 2 in 0.0 seconds
+[0m16:38:45.230809 [debug] [Thread-1 (]: Using postgres connection "model.crm_mongodb.my_first_dbt_model"
+[0m16:38:45.230923 [debug] [Thread-1 (]: On model.crm_mongodb.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.3.2", "profile_name": "crm_mongodb", "target_name": "prod", "node_id": "model.crm_mongodb.my_first_dbt_model"} */
+alter table "airbyte"."public"."my_first_dbt_model__dbt_tmp" rename to "my_first_dbt_model"
+[0m16:38:45.231445 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m16:38:45.251099 [debug] [Thread-1 (]: On model.crm_mongodb.my_first_dbt_model: COMMIT
+[0m16:38:45.251224 [debug] [Thread-1 (]: Using postgres connection "model.crm_mongodb.my_first_dbt_model"
+[0m16:38:45.251314 [debug] [Thread-1 (]: On model.crm_mongodb.my_first_dbt_model: COMMIT
+[0m16:38:45.252355 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m16:38:45.256581 [debug] [Thread-1 (]: Using postgres connection "model.crm_mongodb.my_first_dbt_model"
+[0m16:38:45.256695 [debug] [Thread-1 (]: On model.crm_mongodb.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.3.2", "profile_name": "crm_mongodb", "target_name": "prod", "node_id": "model.crm_mongodb.my_first_dbt_model"} */
+drop table if exists "airbyte"."public"."my_first_dbt_model__dbt_backup" cascade
+[0m16:38:45.257183 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m16:38:45.258088 [debug] [Thread-1 (]: finished collecting timing info
+[0m16:38:45.258215 [debug] [Thread-1 (]: On model.crm_mongodb.my_first_dbt_model: Close
+[0m16:38:45.258705 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '53be3d5e-1a72-4271-9291-da037de72592', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb3ebd49060>]}
+[0m16:38:45.258983 [info ] [Thread-1 (]: 1 of 2 OK created sql table model public.my_first_dbt_model .................... [[32mSELECT 2[0m in 0.09s]
+[0m16:38:45.259393 [debug] [Thread-1 (]: Finished running node model.crm_mongodb.my_first_dbt_model
+[0m16:38:45.259927 [debug] [Thread-3 (]: Began running node model.crm_mongodb.my_second_dbt_model
+[0m16:38:45.260136 [info ] [Thread-3 (]: 2 of 2 START sql view model public.my_second_dbt_model ......................... [RUN]
+[0m16:38:45.260628 [debug] [Thread-3 (]: Acquiring new postgres connection "model.crm_mongodb.my_second_dbt_model"
+[0m16:38:45.260739 [debug] [Thread-3 (]: Began compiling node model.crm_mongodb.my_second_dbt_model
+[0m16:38:45.260840 [debug] [Thread-3 (]: Compiling model.crm_mongodb.my_second_dbt_model
+[0m16:38:45.263178 [debug] [Thread-3 (]: Writing injected SQL for node "model.crm_mongodb.my_second_dbt_model"
+[0m16:38:45.263393 [debug] [Thread-3 (]: finished collecting timing info
+[0m16:38:45.263518 [debug] [Thread-3 (]: Began executing node model.crm_mongodb.my_second_dbt_model
+[0m16:38:45.281762 [debug] [Thread-3 (]: Writing runtime sql for node "model.crm_mongodb.my_second_dbt_model"
+[0m16:38:45.282001 [debug] [Thread-3 (]: Using postgres connection "model.crm_mongodb.my_second_dbt_model"
+[0m16:38:45.282100 [debug] [Thread-3 (]: On model.crm_mongodb.my_second_dbt_model: BEGIN
+[0m16:38:45.282187 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m16:38:45.294563 [debug] [Thread-3 (]: SQL status: BEGIN in 0.01 seconds
+[0m16:38:45.294678 [debug] [Thread-3 (]: Using postgres connection "model.crm_mongodb.my_second_dbt_model"
+[0m16:38:45.294765 [debug] [Thread-3 (]: On model.crm_mongodb.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.3.2", "profile_name": "crm_mongodb", "target_name": "prod", "node_id": "model.crm_mongodb.my_second_dbt_model"} */
+
+  create view "airbyte"."public"."my_second_dbt_model__dbt_tmp" as (
+    -- Use the `ref` function to select from other models
+
+select *
+from "airbyte"."public"."my_first_dbt_model"
+where id = 1
+  );
+[0m16:38:45.298699 [debug] [Thread-3 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m16:38:45.300879 [debug] [Thread-3 (]: Using postgres connection "model.crm_mongodb.my_second_dbt_model"
+[0m16:38:45.300989 [debug] [Thread-3 (]: On model.crm_mongodb.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.3.2", "profile_name": "crm_mongodb", "target_name": "prod", "node_id": "model.crm_mongodb.my_second_dbt_model"} */
+alter table "airbyte"."public"."my_second_dbt_model__dbt_tmp" rename to "my_second_dbt_model"
+[0m16:38:45.301662 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m16:38:45.302928 [debug] [Thread-3 (]: On model.crm_mongodb.my_second_dbt_model: COMMIT
+[0m16:38:45.303040 [debug] [Thread-3 (]: Using postgres connection "model.crm_mongodb.my_second_dbt_model"
+[0m16:38:45.303126 [debug] [Thread-3 (]: On model.crm_mongodb.my_second_dbt_model: COMMIT
+[0m16:38:45.303955 [debug] [Thread-3 (]: SQL status: COMMIT in 0.0 seconds
+[0m16:38:45.305550 [debug] [Thread-3 (]: Using postgres connection "model.crm_mongodb.my_second_dbt_model"
+[0m16:38:45.305651 [debug] [Thread-3 (]: On model.crm_mongodb.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.3.2", "profile_name": "crm_mongodb", "target_name": "prod", "node_id": "model.crm_mongodb.my_second_dbt_model"} */
+drop view if exists "airbyte"."public"."my_second_dbt_model__dbt_backup" cascade
+[0m16:38:45.306077 [debug] [Thread-3 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m16:38:45.306885 [debug] [Thread-3 (]: finished collecting timing info
+[0m16:38:45.307005 [debug] [Thread-3 (]: On model.crm_mongodb.my_second_dbt_model: Close
+[0m16:38:45.307456 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '53be3d5e-1a72-4271-9291-da037de72592', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb3ebd87b50>]}
+[0m16:38:45.307708 [info ] [Thread-3 (]: 2 of 2 OK created sql view model public.my_second_dbt_model .................... [[32mCREATE VIEW[0m in 0.05s]
+[0m16:38:45.308081 [debug] [Thread-3 (]: Finished running node model.crm_mongodb.my_second_dbt_model
+[0m16:38:45.309003 [debug] [MainThread]: Acquiring new postgres connection "master"
+[0m16:38:45.309138 [debug] [MainThread]: Using postgres connection "master"
+[0m16:38:45.309232 [debug] [MainThread]: On master: BEGIN
+[0m16:38:45.309318 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:38:45.324570 [debug] [MainThread]: SQL status: BEGIN in 0.02 seconds
+[0m16:38:45.324688 [debug] [MainThread]: On master: COMMIT
+[0m16:38:45.324778 [debug] [MainThread]: Using postgres connection "master"
+[0m16:38:45.324862 [debug] [MainThread]: On master: COMMIT
+[0m16:38:45.325119 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m16:38:45.325225 [debug] [MainThread]: On master: Close
+[0m16:38:45.325644 [info ] [MainThread]: 
+[0m16:38:45.325856 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 0.25 seconds (0.25s).
+[0m16:38:45.326059 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:38:45.326171 [debug] [MainThread]: Connection 'model.crm_mongodb.my_first_dbt_model' was properly closed.
+[0m16:38:45.326253 [debug] [MainThread]: Connection 'model.crm_mongodb.my_second_dbt_model' was properly closed.
+[0m16:38:45.332777 [info ] [MainThread]: 
+[0m16:38:45.332988 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:38:45.333261 [info ] [MainThread]: 
+[0m16:38:45.333457 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m16:38:45.333709 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb3ebdb33d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb3ebdb3310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb3ebdb1a50>]}
+[0m16:38:45.333922 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-01-22 17:12:22.695132 | 3eb7e4ec-d856-4306-bff1-61828180d6a7 ==============================
+[0m17:12:22.695145 [info ] [MainThread]: Running with dbt=1.3.2
+[0m17:12:22.695651 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/root/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m17:12:22.695852 [debug] [MainThread]: Tracking: tracking
+[0m17:12:22.697269 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9c9dcd5060>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9c9dcd6c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9c9dcd5270>]}
+[0m17:12:22.747422 [debug] [MainThread]: Partial parsing enabled: 3 files deleted, 2 files added, 0 files changed.
+[0m17:12:22.747753 [debug] [MainThread]: Partial parsing: added file: crm_mongodb://models/schema.yml
+[0m17:12:22.747918 [debug] [MainThread]: Partial parsing: added file: crm_mongodb://models/enquires_dbt_model.sql
+[0m17:12:22.748089 [debug] [MainThread]: Partial parsing: deleted file: crm_mongodb://models/example/my_first_dbt_model.sql
+[0m17:12:22.748188 [debug] [MainThread]: Partial parsing: deleted file: crm_mongodb://models/example/my_second_dbt_model.sql
+[0m17:12:22.761281 [debug] [MainThread]: 1699: static parser successfully parsed enquires_dbt_model.sql
+[0m17:12:22.836084 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.crm_mongodb.example
+
+[0m17:12:22.841262 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '3eb7e4ec-d856-4306-bff1-61828180d6a7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9c9d35e500>]}
+[0m17:12:22.846815 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '3eb7e4ec-d856-4306-bff1-61828180d6a7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9c9d72b460>]}
+[0m17:12:22.847028 [info ] [MainThread]: Found 1 model, 2 tests, 0 snapshots, 0 analyses, 289 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+[0m17:12:22.847208 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3eb7e4ec-d856-4306-bff1-61828180d6a7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9c9d72b520>]}
+[0m17:12:22.848094 [info ] [MainThread]: 
+[0m17:12:22.848638 [debug] [MainThread]: Acquiring new postgres connection "master"
+[0m17:12:22.849526 [debug] [ThreadPool]: Acquiring new postgres connection "list_airbyte"
+[0m17:12:22.860195 [debug] [ThreadPool]: Using postgres connection "list_airbyte"
+[0m17:12:22.860317 [debug] [ThreadPool]: On list_airbyte: /* {"app": "dbt", "dbt_version": "1.3.2", "profile_name": "crm_mongodb", "target_name": "prod", "connection_name": "list_airbyte"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m17:12:22.860409 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:12:22.876117 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.02 seconds
+[0m17:12:22.877099 [debug] [ThreadPool]: On list_airbyte: Close
+[0m17:12:22.878093 [debug] [ThreadPool]: Acquiring new postgres connection "list_airbyte_public"
+[0m17:12:22.883365 [debug] [ThreadPool]: Using postgres connection "list_airbyte_public"
+[0m17:12:22.883481 [debug] [ThreadPool]: On list_airbyte_public: BEGIN
+[0m17:12:22.883567 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:12:22.898705 [debug] [ThreadPool]: SQL status: BEGIN in 0.02 seconds
+[0m17:12:22.898821 [debug] [ThreadPool]: Using postgres connection "list_airbyte_public"
+[0m17:12:22.898910 [debug] [ThreadPool]: On list_airbyte_public: /* {"app": "dbt", "dbt_version": "1.3.2", "profile_name": "crm_mongodb", "target_name": "prod", "connection_name": "list_airbyte_public"} */
+select
+      'airbyte' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'airbyte' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+  
+[0m17:12:22.901548 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.0 seconds
+[0m17:12:22.902577 [debug] [ThreadPool]: On list_airbyte_public: ROLLBACK
+[0m17:12:22.902893 [debug] [ThreadPool]: On list_airbyte_public: Close
+[0m17:12:22.907118 [debug] [MainThread]: Using postgres connection "master"
+[0m17:12:22.907238 [debug] [MainThread]: On master: BEGIN
+[0m17:12:22.907332 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:12:22.921078 [debug] [MainThread]: SQL status: BEGIN in 0.01 seconds
+[0m17:12:22.921198 [debug] [MainThread]: Using postgres connection "master"
+[0m17:12:22.921288 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.3.2", "profile_name": "crm_mongodb", "target_name": "prod", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m17:12:22.930793 [debug] [MainThread]: SQL status: SELECT 1 in 0.01 seconds
+[0m17:12:22.931710 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3eb7e4ec-d856-4306-bff1-61828180d6a7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9c9dcd7f70>]}
+[0m17:12:22.931908 [debug] [MainThread]: On master: ROLLBACK
+[0m17:12:22.933198 [debug] [MainThread]: Using postgres connection "master"
+[0m17:12:22.933303 [debug] [MainThread]: On master: BEGIN
+[0m17:12:22.938421 [debug] [MainThread]: SQL status: BEGIN in 0.01 seconds
+[0m17:12:22.938536 [debug] [MainThread]: On master: COMMIT
+[0m17:12:22.938624 [debug] [MainThread]: Using postgres connection "master"
+[0m17:12:22.938708 [debug] [MainThread]: On master: COMMIT
+[0m17:12:22.941077 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m17:12:22.941186 [debug] [MainThread]: On master: Close
+[0m17:12:22.941593 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
+[0m17:12:22.941796 [info ] [MainThread]: 
+[0m17:12:22.944354 [debug] [Thread-1 (]: Began running node model.crm_mongodb.enquires_dbt_model
+[0m17:12:22.944589 [info ] [Thread-1 (]: 1 of 1 START sql view model public.enquires_dbt_model .......................... [RUN]
+[0m17:12:22.945134 [debug] [Thread-1 (]: Acquiring new postgres connection "model.crm_mongodb.enquires_dbt_model"
+[0m17:12:22.945250 [debug] [Thread-1 (]: Began compiling node model.crm_mongodb.enquires_dbt_model
+[0m17:12:22.945357 [debug] [Thread-1 (]: Compiling model.crm_mongodb.enquires_dbt_model
+[0m17:12:22.946851 [debug] [Thread-1 (]: Writing injected SQL for node "model.crm_mongodb.enquires_dbt_model"
+[0m17:12:22.947058 [debug] [Thread-1 (]: finished collecting timing info
+[0m17:12:22.947170 [debug] [Thread-1 (]: Began executing node model.crm_mongodb.enquires_dbt_model
+[0m17:12:22.983552 [debug] [Thread-1 (]: Writing runtime sql for node "model.crm_mongodb.enquires_dbt_model"
+[0m17:12:22.983802 [debug] [Thread-1 (]: Using postgres connection "model.crm_mongodb.enquires_dbt_model"
+[0m17:12:22.983907 [debug] [Thread-1 (]: On model.crm_mongodb.enquires_dbt_model: BEGIN
+[0m17:12:22.983996 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:12:22.999569 [debug] [Thread-1 (]: SQL status: BEGIN in 0.02 seconds
+[0m17:12:22.999686 [debug] [Thread-1 (]: Using postgres connection "model.crm_mongodb.enquires_dbt_model"
+[0m17:12:22.999775 [debug] [Thread-1 (]: On model.crm_mongodb.enquires_dbt_model: /* {"app": "dbt", "dbt_version": "1.3.2", "profile_name": "crm_mongodb", "target_name": "prod", "node_id": "model.crm_mongodb.enquires_dbt_model"} */
+
+  create view "airbyte"."public"."enquires_dbt_model__dbt_tmp" as (
+    with enquiries as (
+
+	select customerId,
+	       salesReturnId
+	from enquiries
+)
+
+select * from enquiries
+  );
+[0m17:12:23.000284 [debug] [Thread-1 (]: Postgres adapter: Postgres error: relation "enquiries" does not exist
+LINE 8:  from enquiries
+              ^
+DETAIL:  There is a WITH item named "enquiries", but it cannot be referenced from this part of the query.
+HINT:  Use WITH RECURSIVE, or re-order the WITH items to remove forward references.
+
+[0m17:12:23.000391 [debug] [Thread-1 (]: On model.crm_mongodb.enquires_dbt_model: ROLLBACK
+[0m17:12:23.000748 [debug] [Thread-1 (]: finished collecting timing info
+[0m17:12:23.000861 [debug] [Thread-1 (]: On model.crm_mongodb.enquires_dbt_model: Close
+[0m17:12:23.001286 [debug] [Thread-1 (]: Database Error in model enquires_dbt_model (models/enquires_dbt_model.sql)
+  relation "enquiries" does not exist
+  LINE 8:  from enquiries
+                ^
+  DETAIL:  There is a WITH item named "enquiries", but it cannot be referenced from this part of the query.
+  HINT:  Use WITH RECURSIVE, or re-order the WITH items to remove forward references.
+  compiled Code at target/run/crm_mongodb/models/enquires_dbt_model.sql
+[0m17:12:23.001483 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3eb7e4ec-d856-4306-bff1-61828180d6a7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9c9d38d5a0>]}
+[0m17:12:23.001739 [error] [Thread-1 (]: 1 of 1 ERROR creating sql view model public.enquires_dbt_model ................. [[31mERROR[0m in 0.06s]
+[0m17:12:23.002094 [debug] [Thread-1 (]: Finished running node model.crm_mongodb.enquires_dbt_model
+[0m17:12:23.003173 [debug] [MainThread]: Acquiring new postgres connection "master"
+[0m17:12:23.003309 [debug] [MainThread]: Using postgres connection "master"
+[0m17:12:23.003407 [debug] [MainThread]: On master: BEGIN
+[0m17:12:23.003493 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:12:23.017302 [debug] [MainThread]: SQL status: BEGIN in 0.01 seconds
+[0m17:12:23.017422 [debug] [MainThread]: On master: COMMIT
+[0m17:12:23.017511 [debug] [MainThread]: Using postgres connection "master"
+[0m17:12:23.017595 [debug] [MainThread]: On master: COMMIT
+[0m17:12:23.017864 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m17:12:23.017974 [debug] [MainThread]: On master: Close
+[0m17:12:23.018389 [info ] [MainThread]: 
+[0m17:12:23.018572 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 0.17 seconds (0.17s).
+[0m17:12:23.018769 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:12:23.018879 [debug] [MainThread]: Connection 'model.crm_mongodb.enquires_dbt_model' was properly closed.
+[0m17:12:23.024214 [info ] [MainThread]: 
+[0m17:12:23.024441 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m17:12:23.024670 [info ] [MainThread]: 
+[0m17:12:23.024861 [error] [MainThread]: [33mDatabase Error in model enquires_dbt_model (models/enquires_dbt_model.sql)[0m
+[0m17:12:23.025053 [error] [MainThread]:   relation "enquiries" does not exist
+[0m17:12:23.025243 [error] [MainThread]:   LINE 8:  from enquiries
+[0m17:12:23.025436 [error] [MainThread]:                 ^
+[0m17:12:23.025625 [error] [MainThread]:   DETAIL:  There is a WITH item named "enquiries", but it cannot be referenced from this part of the query.
+[0m17:12:23.025828 [error] [MainThread]:   HINT:  Use WITH RECURSIVE, or re-order the WITH items to remove forward references.
+[0m17:12:23.026016 [error] [MainThread]:   compiled Code at target/run/crm_mongodb/models/enquires_dbt_model.sql
+[0m17:12:23.026211 [info ] [MainThread]: 
+[0m17:12:23.026404 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m17:12:23.026682 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9c9dcd4c40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9c9dcd7370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9c9d38faf0>]}
+[0m17:12:23.026877 [debug] [MainThread]: Flushing usage events
