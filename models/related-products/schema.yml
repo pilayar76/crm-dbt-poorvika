@@ -2,8 +2,8 @@
 version: 2
 
 models:
-  - name: enquires_dbt_model
-    description: "An enquiries dbt model"
+  - name: related_products_info_normalization
+    description: "A related-products dbt model"
     columns:
       - name: _id
         description: "The primary key for this table"

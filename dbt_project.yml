@@ -34,4 +34,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   crm_mongodb:
     # Config indicated by + and applies to all files under models/example/
-    +materialized: table
+    enquires:
+      +materialized: table
+    related-products:
+      +materialized: table
